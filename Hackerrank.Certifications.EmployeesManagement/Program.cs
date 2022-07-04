@@ -5,6 +5,7 @@
 
         public static Dictionary<string, int> AverageAgeForEachCompany(List<Employee> employees)
         {
+            if (employees.Count <= 0) return new Dictionary<string, int>();
 
             var result = employees.GroupBy(x => x.Company)
                        .ToDictionary(g => g.Key, g => (int)g.Select(x => x.Age).Average());
@@ -14,6 +15,7 @@
 
         public static Dictionary<string, int> CountOfEmployeesForEachCompany(List<Employee> employees)
         {
+            if (employees.Count <= 0) return new Dictionary<string, int>();
 
             var result = employees.GroupBy(x => x.Company)
                        .ToDictionary(g => g.Key, g => g.Count());
@@ -23,7 +25,7 @@
 
         public static Dictionary<string, Employee> OldestAgeForEachCompany(List<Employee> employees)
         {
-            if (employees.Count < 0) return new Dictionary<string, Employee>();
+            if (employees.Count <= 0) return new Dictionary<string, Employee>();
 
             var result = employees.GroupBy(x => x.Company)
                        .ToDictionary(g => g.Key, g => g.MaxBy(x => x.Age));
