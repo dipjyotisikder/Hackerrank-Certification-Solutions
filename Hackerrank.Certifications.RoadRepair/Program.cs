@@ -29,43 +29,29 @@
 
 }
 
-//for (int crewIdx = 0; crewIdx < crew_id.Count(); crewIdx++)
-//{
-//    for (int jobIdx = 0; jobIdx < job_id.Count(); jobIdx++)
-//    {
-//        if (crewIdx == jobIdx)
-//        {
-//            long distance = Math.Abs(crew_id[crewIdx] - job_id[jobIdx]);
-//            totalDistance += distance;
-
-//            break;
-//        }
-//    }
-//}
-
 class Solution
 {
     public static void Main(string[] args)
     {
-        TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH") ?? "", true);
 
-        int crew_idCount = Convert.ToInt32(Console.ReadLine().Trim());
+        int crew_idCount = Convert.ToInt32(Console.ReadLine()?.Trim());
 
-        List<int> crew_id = new List<int>();
+        List<int> crew_id = new();
 
         for (int i = 0; i < crew_idCount; i++)
         {
-            int crew_idItem = Convert.ToInt32(Console.ReadLine().Trim());
+            int crew_idItem = Convert.ToInt32(Console.ReadLine()?.Trim());
             crew_id.Add(crew_idItem);
         }
 
-        int job_idCount = Convert.ToInt32(Console.ReadLine().Trim());
+        int job_idCount = Convert.ToInt32(Console.ReadLine()?.Trim());
 
-        List<int> job_id = new List<int>();
+        List<int> job_id = new();
 
         for (int i = 0; i < job_idCount; i++)
         {
-            int job_idItem = Convert.ToInt32(Console.ReadLine().Trim());
+            int job_idItem = Convert.ToInt32(Console.ReadLine()?.Trim());
             job_id.Add(job_idItem);
         }
 

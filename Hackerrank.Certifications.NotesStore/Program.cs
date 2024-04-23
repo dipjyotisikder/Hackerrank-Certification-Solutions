@@ -13,7 +13,7 @@
         };
 
         public NotesStore() { }
-        public void AddNote(String state, String name)
+        public void AddNote(string state, string name)
         {
             if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name)) throw new Exception("Name cannot be empty");
             if (!string.IsNullOrEmpty(state) && !string.IsNullOrWhiteSpace(state))
@@ -24,7 +24,7 @@
             store.Add(new KeyValuePair<string, string>(name, state));
         }
 
-        public List<String> GetNotes(String state)
+        public List<string> GetNotes(string state)
         {
             if (!string.IsNullOrEmpty(state) && !string.IsNullOrWhiteSpace(state))
             {
@@ -41,14 +41,21 @@
         public static void Main()
         {
             var notesStoreObj = new NotesStore();
-            var n = int.Parse(Console.ReadLine());
+            var n = int.Parse(Console.ReadLine() ?? "");
             for (var i = 0; i < n; i++)
             {
-                var operationInfo = Console.ReadLine().Split(' ');
+                var operationInfo = Console.ReadLine()?.Split(' ');
+                if (operationInfo is null)
+                {
+                    return;
+                }
+
                 try
                 {
                     if (operationInfo[0] == "AddNote")
+                    {
                         notesStoreObj.AddNote(operationInfo[1], operationInfo.Length == 2 ? "" : operationInfo[2]);
+                    }
                     else if (operationInfo[0] == "GetNotes")
                     {
                         var result = notesStoreObj.GetNotes(operationInfo[1]);

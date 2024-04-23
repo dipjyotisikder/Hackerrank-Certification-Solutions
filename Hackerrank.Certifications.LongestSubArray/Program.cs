@@ -8,7 +8,7 @@
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static int longestSubarray(List<int> arr)
+    public static int LongestSubarray(List<int> arr)
     {
         if (arr.Count < 2)
             return arr.Count;
@@ -56,19 +56,19 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH") ?? "", true);
 
-        int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
+        int arrCount = Convert.ToInt32(Console.ReadLine()?.Trim());
 
         List<int> arr = new List<int>();
 
         for (int i = 0; i < arrCount; i++)
         {
-            int arrItem = Convert.ToInt32(Console.ReadLine().Trim());
+            int arrItem = Convert.ToInt32(Console.ReadLine()?.Trim());
             arr.Add(arrItem);
         }
 
-        int result = Result.longestSubarray(arr);
+        int result = Result.LongestSubarray(arr);
 
         textWriter.WriteLine(result);
 

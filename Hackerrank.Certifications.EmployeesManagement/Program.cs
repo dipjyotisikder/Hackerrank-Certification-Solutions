@@ -35,13 +35,13 @@
 
         public static void Main()
         {
-            int countOfEmployees = int.Parse(Console.ReadLine());
+            int countOfEmployees = int.Parse(Console.ReadLine() ?? "");
 
             var employees = new List<Employee>();
 
             for (int i = 0; i < countOfEmployees; i++)
             {
-                string str = Console.ReadLine();
+                string str = Console.ReadLine() ?? "";
                 string[] strArr = str.Split(' ');
                 employees.Add(new Employee
                 {
