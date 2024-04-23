@@ -23,7 +23,7 @@ To get started with the HackerRank Certification Problem Solver, follow these st
 
 ## Contribution
 
-Contributions to the HackerRank Certification Problem Solver are welcome! If you'd like to add new problems, improve existing solutions, or suggest enhancements, please feel free to submit a pull request. Together, we can make this tool even more valuable for the HackerRank community.
+Contributions to the HackerRank Certification Solutions are welcome! If you'd like to add new problems, improve existing solutions, or suggest enhancements, please feel free to submit a pull request. Together, we can make this tool even more valuable for the HackerRank community.
 
 ## License
 
