@@ -31,6 +31,6 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [your@email.com](mailto:dipjyotisikder@gmail.com).
+If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [dipjyotisikder@gmail.com](mailto:dipjyotisikder@gmail.com).
 
 Happy coding and best of luck on your HackerRank C# certification journey!
